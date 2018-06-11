@@ -1,0 +1,16 @@
+
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+&.dark-backdrop {
+   background: #000;
+   opacity: 0.65 !important;
+ }
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
