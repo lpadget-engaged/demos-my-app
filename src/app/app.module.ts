@@ -6,32 +6,31 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import {FilePreviewOverlayComponent} from './file-preview-overlay.component';
-import {FilePreviewOverlayService} from './file-preview-overlay.service';
+import {ProductCatalogComponent} from './product-catalog.component';
+import {SlideoutService} from './slideout.service';
+import {OtherThingComponent} from './other-thing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilePreviewOverlayComponent
+    ProductCatalogComponent,
+    OtherThingComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
     OverlayModule
   ],
   providers: [
-    FilePreviewOverlayService,
+    SlideoutService,
     {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    FilePreviewOverlayComponent
+    ProductCatalogComponent,
+    OtherThingComponent
   ]
 })
 export class AppModule { }

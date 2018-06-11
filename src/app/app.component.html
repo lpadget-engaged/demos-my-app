@@ -6,6 +6,13 @@
 <div style="display: flex;flex-direction: row;">
   <div style="background-color:brown;flex: 1 0 0;" #content>
     this is also not the content you're looking for
+    <button
+      style="background-color:pink;"
+      type="button"
+      mat-button
+      (click)="open1()">
+      toggle
+    </button>
   </div>
   <div style="flex: 2 0 0; background-color:blue; height:100%;">
     this is the origin content area
@@ -13,7 +20,7 @@
       style="background-color:pink;"
       type="button"
       mat-button
-      (click)="open()">
+      (click)="open2()">
       toggle
     </button>
   </div>

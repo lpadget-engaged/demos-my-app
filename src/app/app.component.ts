@@ -1,8 +1,8 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import {FilePreviewOverlayService} from './file-preview-overlay.service';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import {SlideoutService} from './slideout.service';
+import { ProductCatalogComponent } from './product-catalog.component';
+import {OtherThingComponent} from './other-thing.component';
 
 @Component({
   selector: 'app-root',
@@ -12,15 +12,15 @@ import {FilePreviewOverlayService} from './file-preview-overlay.service';
 export class AppComponent {
 
   @ViewChild('content') content: ElementRef;
+  private index = 0;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+  constructor(private breakpointObserver: BreakpointObserver, private slideoutService: SlideoutService) {}
 
-  constructor(private breakpointObserver: BreakpointObserver, private filePreviewOverlayService: FilePreviewOverlayService) {}
+  open1() {
+    this.slideoutService.open(this.content, {type: ProductCatalogComponent, index: this.index});
+  }
 
-  open() {
-    this.filePreviewOverlayService.open(this.content);
+  open2() {
+    this.slideoutService.open(this.content,{type: OtherThingComponent, index: this.index});
   }
 }
