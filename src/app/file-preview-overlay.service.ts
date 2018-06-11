@@ -26,13 +26,13 @@ export class FilePreviewOverlayService {
     private injector: Injector,
     private overlay: Overlay) { }
 
-    open(originElement: ElementRef) {
+    public open(originElement: ElementRef) {
       // Override default configuration
       let dialogConfig: FilePreviewDialogConfig;
       dialogConfig = {
         hasBackdrop: true,
         backdropClass: 'dark-backdrop',
-        panelClass: 'tm-file-preview-dialog-panel',
+        panelClass: 'dialog-panel',
         image: null
       }
 
@@ -75,6 +75,7 @@ export class FilePreviewOverlayService {
   private getOverlayConfig(originElement: ElementRef, config: FilePreviewDialogConfig): OverlayConfig {
     const positionStrategy = this.overlay.position()
       .flexibleConnectedTo(originElement)
+      .withPush(false)
       .withPositions([{
         overlayX: 'start',
         overlayY: 'top',
@@ -86,7 +87,7 @@ export class FilePreviewOverlayService {
 
     const overlayConfig = new OverlayConfig({
       hasBackdrop: config.hasBackdrop,
-      backdropClass: config.backdropClass,
+      // backdropClass: config.backdropClass,
       panelClass: config.panelClass,
       scrollStrategy: this.overlay.scrollStrategies.block(),
       positionStrategy

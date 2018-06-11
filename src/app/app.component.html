@@ -1,10 +1,20 @@
-<div class="content" #content>
-  here is some content
-  <button
-    style="background-color:pink;"
-    type="button"
-    mat-button
-    (click)="open()">
-    toggle
-  </button>
+
+<!--<div style="background-color:green;">-->
+  <!--this is not the content you're looking for-->
+<!--</div>-->
+
+<div style="display: flex;flex-direction: row;">
+  <div style="background-color:brown;flex: 1 0 0;">
+    this is also not the content you're looking for
+  </div>
+  <div class="content" #content>
+    this is the origin content area
+    <button
+      style="background-color:pink;"
+      type="button"
+      mat-button
+      (click)="open()">
+      toggle
+    </button>
+  </div>
 </div>

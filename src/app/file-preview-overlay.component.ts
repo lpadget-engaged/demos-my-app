@@ -18,11 +18,9 @@ import { FILE_PREVIEW_DIALOG_DATA } from './file-preview-overlay.tokens';
     }
 
     .overlay-content {
-      background-color: orange;
       border: 1px red solid;
       margin:0;
       padding:0;
-      height:100%;
     }
   `]
 })
