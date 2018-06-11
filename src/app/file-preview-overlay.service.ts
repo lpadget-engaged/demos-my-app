@@ -77,9 +77,9 @@ export class FilePreviewOverlayService {
       .flexibleConnectedTo(originElement)
       .withPush(false)
       .withPositions([{
-        overlayX: 'start',
+        overlayX: 'end',
         overlayY: 'top',
-        originX: 'start',
+        originX: 'end',
         originY: 'top'
       }]);
 
@@ -87,7 +87,7 @@ export class FilePreviewOverlayService {
 
     const overlayConfig = new OverlayConfig({
       hasBackdrop: config.hasBackdrop,
-      // backdropClass: config.backdropClass,
+      backdropClass: config.backdropClass,
       panelClass: config.panelClass,
       scrollStrategy: this.overlay.scrollStrategies.block(),
       positionStrategy
