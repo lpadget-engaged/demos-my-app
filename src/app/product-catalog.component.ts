@@ -5,16 +5,11 @@ import {SlideoutObjectOut} from './slideout.service';
   selector: 'et-product-catalog',
   template: `
     <div class="overlay-content">
+      I'm a product catalog component!<br>
       <img src="https://openclipart.org/image/90px/svg_to_png/216413/coniglio_rabbit_small.png">
     </div>
   `,
   styles: [`
-
-    img {
-      width: 100%;
-      max-width: 500px;
-    }
-
     .overlay-content {
       border: 1px red solid;
       margin:0;

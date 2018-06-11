@@ -5,16 +5,11 @@ import {SlideoutObjectOut} from './slideout.service';
   selector: 'et-other-thing',
   template: `
     <div class="overlay-content">
+      I'm an other thing component!<br>
       <img src="https://openclipart.org/image/90px/svg_to_png/302937/1528405729.png">
     </div>
   `,
   styles: [`
-
-    img {
-      width: 100%;
-      max-width: 500px;
-    }
-
     .overlay-content {
       border: 1px deepskyblue solid;
       margin:0;

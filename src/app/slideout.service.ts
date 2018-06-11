@@ -8,8 +8,9 @@ export abstract class SlideoutObjectOut {
   public index: number;
   public abstract getObject(): any;
 }
-// export const slideoutClosedEventEmitter = new EventEmitter<SlideoutObjectOut>();
 
+// No longer used... we have a service instead
+// export const slideoutClosedEventEmitter = new EventEmitter<SlideoutObjectOut>();
 // export const slideoutOpenedEventEmitter = new EventEmitter<SlideoutObjectIn>();
 
 export interface SlideoutObjectIn {
